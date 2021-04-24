@@ -58,10 +58,4 @@ public class AddressBook {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public void printContact() {
-		System.out.print("Name: " + firstName +" "+lastName+" , Address: "+address+ ", City: " +city+", State: "+state);
-		System.out.println(", Phone: " +phoneNo+ ", email"+email+", Pin Code: " + zip + ".");
-		
-	}
-
 }
