@@ -1,64 +1,42 @@
 import java.util.Scanner;
 public class AddressBookMain {
 	public static void main(String args[]) {
-		AddressBook ad = new AddressBook();
+		AddContact ac = new AddContact();
 		Scanner sc = new Scanner(System.in);
 		
+		
+		System.out.println("Enter 1 : Add contact");
+		System.out.println("Enter 2 : edit contact ");
+		int choose = sc.nextInt();
+		switch(choose) {
 		//first name
-		System.out.println("Enter first name");
-		String firstName = sc.nextLine();
-		ad.setFirstName(firstName);
-		
-		//Last Name
-		System.out.println("Enter Last  name");
-		String lastName = sc.nextLine();
-		ad.setLastName(lastName);
-		
-		//Address
-		System.out.println("Enter address");
-		String address = sc.nextLine();
-		ad.setAddress(address);
-		
-		//City
-		System.out.println("Enter City");
-		String city = sc.nextLine();
-		ad.setCity(city);
-		
-		//State
-		System.out.println("Enter state");
-		String state = sc.nextLine();
-		ad.setState(state);
-		
-		//Phone no.
-		System.out.println("Enter phone number");
-		String phoneNo = sc.nextLine();
-		ad.setPhoneNo(phoneNo);
-		
-		//Email
-		System.out.println("Enter email");
-		String email = sc.nextLine();
-		ad.setEmail(email);
-		
-		//Zip
-		System.out.println("Enter Zip");
-		int zip = sc.nextInt();
-		ad.setZip(zip);
-		
-		System.out.println("First Name : " +ad.getFirstName());
-		System.out.println("Last Name : " +ad.getLastName());
-		System.out.println("Address : " +ad.getAddress());
-		System.out.println("City : " +ad.getCity());
-		System.out.println("State : " +ad.getState());
-		System.out.println("Phone no. : " +ad.getPhoneNo());
-		System.out.println("Email : " +ad.getEmail());
-		System.out.println("Zip : " +ad.getZip());
-		
-		
-		
-		
-		
-		
-		
+		case 1 :
+			ac.addContact();
+			System.out.println("For Edit this contact press 1 , otherwise press 0");
+			int f = sc.nextInt();
+			if (f == 1) {
+				ac.editContact();
+				break;
+			}
+			else if(f == 0) {
+				System.out.println("Contact updated");
+				break;
+			}
+			else {
+				System.out.println("Invalid Choice");
+				break;
+			}
+		case 2:
+			
+			ac.editContact();
+			System.out.println("Contact Updated");
+			break;
+			
+		default:
+			System.out.println("Invalid Choice");
+			break;
+			
+		}	
 		
 	}
 	
