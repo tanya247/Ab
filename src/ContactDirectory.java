@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class AddContact{
+public class ContactDirectory{
 	String firstName,lastName,address,city,state,email,phoneNo;
     int zip;
     Scanner scanner = new Scanner(System.in);
@@ -57,8 +57,12 @@ public class AddContact{
 		else {
 				System.out.println("Name not found");
 		}
-		
+	
     }
-		 
+	public void show() {
+		for(int i = 0 ; i<contacts.size();i++) {
+			System.out.println(contacts.get(i));
+		}
+	}
 }
         

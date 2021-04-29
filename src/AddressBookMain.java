@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class AddressBookMain {
 	public static void main(String args[]) {
-		AddContact ac = new AddContact();
+		ContactDirectory ac = new ContactDirectory();
 		Scanner sc = new Scanner(System.in);
 		
 		
